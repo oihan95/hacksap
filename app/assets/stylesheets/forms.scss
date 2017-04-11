@@ -1,0 +1,55 @@
+.formulario {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 350px;
+    padding: 20px 20px 20px 20px;
+    font: 12px Monaco, monospace;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.input[type="text"], .input[type="password"], .textarea{
+    width: 70%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Monaco, monospace;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+
+.input[type="button"]{
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    background: #000000;
+    border: none;
+    color: green;
+    border-radius: 4px;
+    font-family: Monaco, monospace;
+}
+
+.input[type="button"]:hover{
+    background: white;
+}
+
+.textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+
+.button{
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-family: Monaco, monospace;
+    
+}
+.button:hover{
+    background: green;
+}

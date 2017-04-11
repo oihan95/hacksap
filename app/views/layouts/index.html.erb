@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HackSAP - Inicio</title>
+	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "titles" %>
+	<%= stylesheet_link_tag "colours" %>
+	<%= stylesheet_link_tag "form" %>
+	<%= stylesheet_link_tag "shapes" %>
+	<!--<script type="text/javascript" src="form.js"></script>-->
+	<!--<script type="text/javascript" src="ajax.js"></script>-->
+</head>
+<body>
+	<div class="aligncenter wrapper white">
+		<br>
+		<div class="aligncenter">
+			<!--<img src="img/terminus.png" width="175">-->
+		</div>
+		<span class="h1">Bienvenido a </span><span class="h1 green">Hack</span><span class="h1">SAP!</span>
+	</div>
+	<br>
+	<form class="formulario wrapper aligncenter backgroundgreen" id="login" method="POST">
+		<p>Usuario:</p>
+		<input class="input" type="text" name="erabiltzailea" id="erabiltzailea" value=""/>
+		<p>Contraseña:</p>
+		<input class="input" type="password" name="pasahitza" id="pasahitza" value=""/>
+		<input class="input" type="button" name="botoia" id="botoia" value="Entrar" onclick="balidatulogin()" />
+	</form>
+	<br>
+	<div id="error" class="errorBox backgroundred wrapper">
+	</div>
+	<br>
+	<div class="aligncenter">
+		<!--<img src="img/eurokidetza.png" width="125">-->
+	</div>
+</body>
+</html>
