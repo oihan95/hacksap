@@ -17,16 +17,18 @@
 		<div class="aligncenter">
 			<!--<img src="img/terminus.png" width="175">-->
 		</div>
-		<span class="h1">Ongi etorri!!</span><span class="h1 green">Hack</span><span class="h1">SAP!-era</span>
+		<span class="h1">Ongi etorri </span><span class="h1 green">Hack</span><span class="h1">SAP!-era</span>
 	</div>
 	<br>
-	<form class="formulario wrapper aligncenter backgroundgreen" id="login" method="POST">
-		<p>Erabiltzailea:</p>
-		<input class="input" type="text" name="erabiltzailea" id="erabiltzailea" value=""/>
-		<p>Pasahitza:</p>
-		<input class="input" type="password" name="pasahitza" id="pasahitza" value=""/>
-		<input class="input" type="button" name="botoia" id="botoia" value="Entrar" onclick="balidatulogin()" />
-	</form>
+	<div class="formulario wrapper aligncenter backgroundgreen">
+	    <%= form_for(:session, url: "/login") do |f| %>
+	    	<%= f.label :email %>
+	    	<%= f.email_field :email, class: 'form-control' %>
+	    	<%= f.label :password %>
+	    	<%= f.password_field :password, class: 'form-control' %>
+	    	<%= f.submit "Sartu", class: "btn btn-primary" %>
+	    <% end %>
+  	</div>
 	<br>
 	<div id="error" class="errorBox backgroundred wrapper">
 	</div>
