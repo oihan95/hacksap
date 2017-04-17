@@ -1,2 +1,43 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>HackSAP - Erregistratu</title>
+	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "titles" %>
+	<%= stylesheet_link_tag "colours" %>
+	<%= stylesheet_link_tag "forms" %>
+	<%= stylesheet_link_tag "shapes" %>
+	<!--<script type="text/javascript" src="form.js"></script>-->
+	<!--<script type="text/javascript" src="ajax.js"></script>-->
+</head>
+<body>
+	<div class="aligncenter wrapper white">
+		<br>
+		<div class="aligncenter">
+			<!--<img src="img/terminus.png" width="175">-->
+		</div>
+		<span class="h1">Ongi etorri </span><span class="h1 green">Hack</span><span class="h1">SAP!-era</span>
+	</div>
+	<br>
+	<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
+		<%= form_for(@user) do |f| %>
+      		<%= f.label :erab_izena %>
+      		<%= f.text_field :erab_izena, class: 'input'%><br />
+      		<%= f.label :izena %>
+      		<%= f.text_field :izena, class: 'input' %><br /> 
+      		<%= f.label :abizena %>
+     		<%= f.text_field :abizena, class: 'input' %><br />
+     		<%= f.label :pasahitza%>
+      		<%= f.password_field :pasahitza, class: 'input' %>
+      		<%= f.label :password_confirmation, "Pasahitza balidatu" %>
+      		<%= f.password_field :password_confirmation, class: 'input' %>
+      		<%= f.submit "Erregistratu", class: "button" %>
+    	<% end %>
+  	</div>
+	<br>
+	<div class="aligncenter">
+		<!--<img src="img/eurokidetza.png" width="125">-->
+	</div>
+</body>
+</html>
