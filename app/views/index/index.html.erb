@@ -20,18 +20,17 @@
 		<span class="h1">Ongi etorri </span><span class="h1 green">Hack</span><span class="h1">SAP!-era</span>
 	</div>
 	<br>
-	<div>
-	    <%= form_for(:session, url: "/login", :html => {:class => 'formulario wrapper aligncenter backgroundgreen'}) do |f| %>
+	<div class="formulario wrapper aligncenter backgroundgreen">
+	    <%= form_for(:session, url: "/login") do |f| %>
 	    	<%= f.label :username %>
 	    	<%= f.text_field :text, class: 'input' %><br />
 	    	<%= f.label :password %>
 	    	<%= f.password_field :password, class: 'input' %>
 	    	<%= f.submit "Sartu", class: "button" %>
 	    <% end %>
+	    <br />
+	    <h5>Erabiltzaile berria? Sortu kontu berri bat <%= link_to "hemen", signup_path %>!</h5>
   	</div>
-	<br>
-	<div id="error" class="errorBox backgroundred wrapper">
-	</div>
 	<br>
 	<div class="aligncenter">
 		<!--<img src="img/eurokidetza.png" width="125">-->
