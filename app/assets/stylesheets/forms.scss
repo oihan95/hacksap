@@ -22,20 +22,6 @@
     margin: 2px 6px 16px 0px;
 }
 
-.input[type="button"]{
-    margin-top: 10px;
-    padding: 10px 30px 10px 30px;
-    background: #000000;
-    border: none;
-    color: green;
-    border-radius: 4px;
-    font-family: Monaco, monospace;
-}
-
-.input[type="button"]:hover{
-    background: white;
-}
-
 .textarea{
     height:100px;
     padding: 5px 0px 0px 5px;
@@ -48,8 +34,10 @@
     border: none;
     border-radius: 4px;
     font-family: Monaco, monospace;
+    color: green;
+    background-color: white;
     
 }
 .button:hover{
-    background: green;
+    background: black;
 }

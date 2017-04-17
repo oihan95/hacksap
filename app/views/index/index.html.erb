@@ -6,7 +6,7 @@
 	<%= stylesheet_link_tag "style" %>
 	<%= stylesheet_link_tag "titles" %>
 	<%= stylesheet_link_tag "colours" %>
-	<%= stylesheet_link_tag "form" %>
+	<%= stylesheet_link_tag "forms" %>
 	<%= stylesheet_link_tag "shapes" %>
 	<!--<script type="text/javascript" src="form.js"></script>-->
 	<!--<script type="text/javascript" src="ajax.js"></script>-->
@@ -20,13 +20,13 @@
 		<span class="h1">Ongi etorri </span><span class="h1 green">Hack</span><span class="h1">SAP!-era</span>
 	</div>
 	<br>
-	<div class="formulario wrapper aligncenter backgroundgreen">
-	    <%= form_for(:session, url: "/login") do |f| %>
-	    	<%= f.label :email %>
-	    	<%= f.email_field :email, class: 'form-control' %>
+	<div>
+	    <%= form_for(:session, url: "/login", :html => {:class => 'formulario wrapper aligncenter backgroundgreen'}) do |f| %>
+	    	<%= f.label :username %>
+	    	<%= f.text_field :text, class: 'input' %><br />
 	    	<%= f.label :password %>
-	    	<%= f.password_field :password, class: 'form-control' %>
-	    	<%= f.submit "Sartu", class: "btn btn-primary" %>
+	    	<%= f.password_field :password, class: 'input' %>
+	    	<%= f.submit "Sartu", class: "button" %>
 	    <% end %>
   	</div>
 	<br>
