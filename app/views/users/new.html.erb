@@ -22,6 +22,9 @@
 	<br>
 	<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
 		<%= form_for(@user, url: signup_path) do |f| %>
+    			<% flash.each do |message_type, message| %>
+  					<div class="alert alert-<%= message_type %>"><%= message %></div>
+				<% end %>
 			<%= render 'shared/error_messages' %>
 			<table style="width:100%">
 				<tr>

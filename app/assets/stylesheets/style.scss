@@ -75,6 +75,15 @@ a.esteka:hover{
  	padding-right: 5px;
  }
 
- .jump{
+ .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: black;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
 
+ .alert-success{
+ 	background-color: #00FF00; 
  }
