@@ -1,6 +1,10 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-      Formulario honek <%= pluralize(@user.errors.count, "error") %> ditu.
+  	<% if @user.errors.count > 1 %>
+  		Formulario honek <%= @user.errors.count %> errore ditu.
+  	<% else %>
+  		Formulario honek errore bat du.
+	<% end %>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>

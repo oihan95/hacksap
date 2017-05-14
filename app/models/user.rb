@@ -4,5 +4,6 @@ class User < ApplicationRecord
 	validates :erab_izena, presence: true, uniqueness: { case_sensitive: false }
 	validates :izena, presence: true, length: { maximum: 50 }
 	validates :abizena, presence: true
-	validates :pasahitza, presence: true, length: { minimum: 6}
+	validates :pasahitza, presence: true, confirmation: true, length: { minimum: 6}, :confirmation => true
+	validates :pasahitza_confirmation, presence: true
 end
