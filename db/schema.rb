@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170417215418) do
+ActiveRecord::Schema.define(version: 20170514073453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170417215418) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "pasahitza"
+    t.index ["erab_izena"], name: "index_users_on_erab_izena", unique: true, using: :btree
   end
 
 end
