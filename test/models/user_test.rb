@@ -18,4 +18,14 @@ class UserTest < ActiveSupport::TestCase
     @user.erab_izena = "     "
     assert_not @user.valid?
   end
+
+  test "name should not be too long" do
+    @user.izena = "a" * 51
+    assert_not @user.valid?
+  end
+
+  test "email should not be too long" do
+    @user.erab_izena = "a" * 244 + "@example.com"
+    assert_not @user.valid?
+  end
 end
