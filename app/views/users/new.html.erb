@@ -21,7 +21,7 @@
 	</div>
 	<br>
 	<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
-		<%= form_for(@user) do |f| %>
+		<%= form_for(@user, url: signup_path) do |f| %>
 			<%= render 'shared/error_messages' %>
       		<%= f.label :erab_izena %>
       		<%= f.text_field :erab_izena, class: 'input'%><br />
