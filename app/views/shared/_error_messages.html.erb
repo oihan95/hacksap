@@ -1,14 +1,17 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
+    <br />
   	<% if @user.errors.count > 1 %>
   		Formulario honek <%= @user.errors.count %> errore ditu.
   	<% else %>
   		Formulario honek errore bat du.
 	<% end %>
     <ul>
+    <br />
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
+    <br />
     </ul>
   </div>
 <% end %>
