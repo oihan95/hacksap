@@ -18,6 +18,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:izena, :erab_izena, :pasahitza)
+      params.require(:user).permit(:izena, :abizena, :erab_izena, :pasahitza)
     end
 end

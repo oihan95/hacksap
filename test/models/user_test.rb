@@ -9,12 +9,12 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
 
-  test "name should be present" do
+  test "Izenaren kaxa betzetzea ezinbestekoa da" do
     @user.izena = "     "
     assert_not @user.valid?
   end
 
-  test "erab_izena should be present" do
+  test "Erabiltzaile izenaren kaxa betetzea ezinbestekoa da" do
     @user.erab_izena = "     "
     assert_not @user.valid?
   end

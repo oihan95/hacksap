@@ -1,8 +1,6 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <div class="alert alert-danger">
       Formulario honek <%= pluralize(@user.errors.count, "error") %> ditu.
-    </div>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>

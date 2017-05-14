@@ -43,9 +43,11 @@
 }
 
 #error_explanation {
-  color: red;
+  color: white;
+  size: bold;
+  background-color: red;
   ul {
-    color: red;
+    color: white;
     margin: 0 0 30px 0;
   }
 }

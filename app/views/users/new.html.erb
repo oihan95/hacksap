@@ -23,21 +23,36 @@
 	<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
 		<%= form_for(@user, url: signup_path) do |f| %>
 			<%= render 'shared/error_messages' %>
-      		<%= f.label :erab_izena %>
-      		<%= f.text_field :erab_izena, class: 'input'%><br />
-      		<%= f.label :izena %>
-      		<%= f.text_field :izena, class: 'input' %><br /> 
-      		<%= f.label :abizena %>
-     		<%= f.text_field :abizena, class: 'input' %><br />
-     		<%= f.label :pasahitza%>
-      		<%= f.password_field :pasahitza, class: 'input' %>
-      		<%= f.label :password_confirmation, "Pasahitza balidatu" %>
-      		<%= f.password_field :password_confirmation, class: 'input' %>
+			<table>
+				<tr>
+					<th align="left"><%= f.label :erab_izena %></th>
+					<th><%= f.text_field :erab_izena, class: 'input'%></th>
+				</tr>
+				<tr>
+					<th align="left"><%= f.label :izena %></th>
+					<th><%= f.text_field :izena, class: 'input' %></th>
+				</tr>
+				<tr>
+					<th align="left"><%= f.label :abizena %></th>
+					<th><%= f.text_field :abizena, class: 'input' %></th>
+				</tr>
+				<tr>
+					<th align="left"><%= f.label :pasahitza%></th>
+					<th><%= f.password_field :pasahitza, class: 'input' %></th>
+				</tr>
+				<tr>
+					<th align="left"><%= f.label :password_confirmation, "Pasahitza balidatu" %></th>
+					<th><%= f.password_field :password_confirmation, class: 'input' %></th>
+				</tr>
+			</table>
       		<%= f.submit "Erregistratu", class: "button" %>
+      		<br />
+      		<br />
+      		<h5><%= link_to "Atzera", signup_path %></h5>
     	<% end %>
   	</div>
 	<br>
-	<div class="aligncenter">
+	<div class="aligncenter wrapper backgroundgreen">
 		<!--<img src="img/eurokidetza.png" width="125">-->
 	</div>
 </body>
