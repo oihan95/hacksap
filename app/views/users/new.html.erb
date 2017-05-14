@@ -23,26 +23,26 @@
 	<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
 		<%= form_for(@user, url: signup_path) do |f| %>
 			<%= render 'shared/error_messages' %>
-			<table>
+			<table style="width:100%">
 				<tr>
-					<th align="left"><%= f.label :erab_izena %></th>
-					<th><%= f.text_field :erab_izena, class: 'input'%></th>
+					<td width="30%" align="left"><%= f.label :erab_izena %></td>
+					<td width="70%"><%= f.text_field :erab_izena, class: 'input'%></td>
 				</tr>
 				<tr>
-					<th align="left"><%= f.label :izena %></th>
-					<th><%= f.text_field :izena, class: 'input' %></th>
+					<td width="30%" align="left"><%= f.label :izena %></td>
+					<td width="70%"><%= f.text_field :izena, class: 'input' %></td>
 				</tr>
 				<tr>
-					<th align="left"><%= f.label :abizena %></th>
-					<th><%= f.text_field :abizena, class: 'input' %></th>
+					<td width="30%" align="left"><%= f.label :abizena %></td>
+					<td width="70%"><%= f.text_field :abizena, class: 'input' %></td>
 				</tr>
 				<tr>
-					<th align="left"><%= f.label :pasahitza%></th>
-					<th><%= f.password_field :pasahitza, class: 'input' %></th>
+					<td width="30%" align="left"><%= f.label :pasahitza%></td>
+					<td width="70%"><%= f.password_field :pasahitza, class: 'input' %></td>
 				</tr>
 				<tr>
-					<th align="left"><%= f.label :pasahitza_confirmation, "Pasahitza balidatu" %></th>
-					<th><%= f.password_field :pasahitza_confirmation, class: 'input' %></th>
+					<td width="30%" align="left"><%= f.label :pasahitza_confirmation, "Pasahitza balidatu" %></td>
+					<td width="70%"><%= f.password_field :pasahitza_confirmation, class: 'input' %></td>
 				</tr>
 			</table>
       		<%= f.submit "Erregistratu", class: "button" %>
