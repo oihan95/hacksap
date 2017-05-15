@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514073453) do
+ActiveRecord::Schema.define(version: 20170515081314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20170514073453) do
     t.string   "izena"
     t.string   "abizena"
     t.string   "erab_izena"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "pasahitza"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
     t.index ["erab_izena"], name: "index_users_on_erab_izena", unique: true, using: :btree
   end
 

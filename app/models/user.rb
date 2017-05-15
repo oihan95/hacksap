@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_secure_password
 	before_save { erab_izena.downcase! }
 	before_save { self.erab_izena = erab_izena.downcase }
 	validates :erab_izena, presence: true, uniqueness: { case_sensitive: false }
