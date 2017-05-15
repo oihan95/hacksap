@@ -22,10 +22,10 @@
 	<br>
 	<div class="formulario wrapper aligncenter backgroundgreen">
 	    <%= form_for(:session, url: login_path) do |f| %>
-	    	<%= f.label :username %>
-	    	<%= f.text_field :text, class: 'input' %><br />
-	    	<%= f.label :password %>
-	    	<%= f.password_field :password, class: 'input' %>
+	    	<%= f.label :erab_izena %>
+	    	<%= f.text_field :erab_izena, class: 'input' %><br />
+	    	<%= f.label :pasahitza %>
+	    	<%= f.password_field :pasahitza, class: 'input' %>
 	    	<%= f.submit "Sartu", class: "button" %>
 	    <% end %>
 	    <br />
