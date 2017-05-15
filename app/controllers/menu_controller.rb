@@ -4,7 +4,7 @@ class MenuController < ApplicationController
 	private
 		def authenticate_user!
 			if not logged_in?
-				redirecto_to 'forbidden_login'
+				redirect_to root_path
 			end
   		end
 end

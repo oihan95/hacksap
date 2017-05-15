@@ -43,7 +43,7 @@ div.navbar a:hover {
 
 .wrapper{
 	margin: auto;
-	width: 90%;
+	width: 95%;
 }
 
 .aligncenter{
@@ -65,15 +65,6 @@ a.esteka:hover{
 	bottom: 0px;
 	position: fixed;
 }
- .aboutus{
- 	float: left;
- 	padding-left: 5px;
- }
-
- .terminus{
- 	float: right;
- 	padding-right: 5px;
- }
 
  .alert {
     padding: 20px;
@@ -86,4 +77,8 @@ a.esteka:hover{
 
  .alert-success{
  	background-color: #00FF00; 
+ }
+
+ .jump{
+ 	padding-top: 90px;
  }
