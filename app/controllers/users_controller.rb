@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_user!
   def show
     @user = User.find(params[:id])
   end
@@ -20,5 +22,11 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:izena, :abizena, :erab_izena, :password, :password_confirmation)
+    end
+
+    def authenticate_user!
+      if logged_in?
+        redirect_to menu_path
+      end
     end
 end
