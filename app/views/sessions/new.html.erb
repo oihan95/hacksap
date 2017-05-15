@@ -21,14 +21,14 @@
 	</div>
 	<br>
 	<div class="formulario wrapper aligncenter backgroundgreen">
+		<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
 	    <%= form_for(:session, url: login_path) do |f| %>
-	    		<% flash.each do |message_type, message| %>
-  					<div class="alert alert-<%= message_type %>"><%= message %></div>
-				<% end %>
 	    	<%= f.label :erab_izena %>
-	    	<%= f.text_field :erab_izena, class: 'input' %><br />
+	    	<%= f.text_field :erab_izena, class: 'input', :required => 'required' %><br />
 	    	<%= f.label :password %>
-	    	<%= f.password_field :password, class: 'input' %>
+	    	<%= f.password_field :password, class: 'input', :required => 'required' %>
 	    	<%= f.submit "Sartu", class: "button" %>
 	    <% end %>
 	    <br />
