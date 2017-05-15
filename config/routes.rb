@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-	root :to => "users#index", :id => '1'
+  get 'sessions/new'
+
+	root :to => "sessions#new", :id => '1'
 	get  '/signup',  to: 'users#new'
 	post '/signup',  to: 'users#create'
 	get    '/login',   to: 'sessions#new'

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     	log_in user
     	redirect_to menu_path
     else
-      render template: "index/index"
+      render 'new'
     end
   end
 
