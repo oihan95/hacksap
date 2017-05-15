@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
     	log_in user
     	redirect_to menu_path
     else
-      flash.now[:danger] = 'Invalid email/password combination'
-      render 'new'
+      render template: "index/index"
     end
   end
 

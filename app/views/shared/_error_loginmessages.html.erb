@@ -1,0 +1,17 @@
+<% if @session.errors.any? %>
+  <div id="error_explanation">
+    <br />
+  	<% if @session.errors.count > 1 %>
+  		Formulario honek <%= @session.errors.count %> errore ditu.
+  	<% else %>
+  		Formulario honek errore bat du.
+	<% end %>
+    <ul>
+    <br />
+    <% @session.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    <br />
+    </ul>
+  </div>
+<% end %>

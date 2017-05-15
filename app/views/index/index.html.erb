@@ -22,6 +22,10 @@
 	<br>
 	<div class="formulario wrapper aligncenter backgroundgreen">
 	    <%= form_for(:session, url: login_path) do |f| %>
+	    		<% flash.each do |message_type, message| %>
+  					<div class="alert alert-<%= message_type %>"><%= message %></div>
+				<% end %>
+				<%= render 'shared/error_loginmessages' %>
 	    	<%= f.label :erab_izena %>
 	    	<%= f.text_field :erab_izena, class: 'input' %><br />
 	    	<%= f.label :password %>
