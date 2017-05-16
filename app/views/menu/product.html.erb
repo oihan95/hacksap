@@ -12,19 +12,12 @@
   <div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
   <div class="navbar">
     <%= link_to "Hasiera", menu_path, method: :delete %>
-    <a href="">Produktuak</a>
+    <%= link_to "Produktuak", products_path, method: :get%>
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
 <div class=" wrapper white jump">
-  <span class="h1">Kaixo <%= current_user.izena %>!</span>
+  <span class="h1">Produktuak!</span>
 </div>
-
-<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
-
-
-
-</div>
-
 </body>
 </html>

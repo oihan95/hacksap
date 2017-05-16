@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   	get 'forbiddenlogin', to: 'shared#forbiddenlogin'
   	delete '/logout',  to: 'sessions#destroy'
   	get '/logout',  to: 'sessions#destroy'
-	resources :users
+	resources :user
 
+  get 'products', to: 'products#menu'
+  get '/products/new', to: 'products#new'
+  post '/products/new', to: 'product#new'
 end
