@@ -21,23 +21,26 @@
 <div class=" wrapper aligncenter white jump">
   <h5><%= link_to "Produktu berria gehitu", products_new_path, method: :get, :class=>"button2" %></h5>
   <br />
+  <div class="wrapper aligncenter">
+  <span class="h5 white">Produktu baten informazioa bistaratzeko, egin 'click' produktuaren 'Materiala' zutabearen gainean</span>
+  </div>
+  <br />
   <div class="caption">Produktuak</div>
   <div id="table">
-    <div class="header-row row">
+    <div class="header-row row2">
       <span class="cell"></span>
       <span class="cell">Materiala</span>
       <span class="cell">Testua</span>
       <span class="cell">Hornitzailearen erreferentzia</span>
       <span class="cell">Kantitatea</span>
-
     </div>
     <% all.each do |f|  %>
-      <div class = "header-row row">
-        <input type="checkbox" id = <% f.id %>>
-        <span class="cell" id = <% f.id %>><%= f.material %></span>
-        <span class="cell" id = <% f.id %>><%= f.text %></span>
-        <span class="cell" id = <% f.id %>><%=  f.reference%></span>
-        <span class="cell" id = <% f.id %>><%= f.quantity %></span>
+      <div class = "row">
+        <span class="cell"><input type="checkbox" id = <% f.id %>></span>
+        <span class="cell"><%= link_to f.material, product_path(f), :class=>"esteka2" %></span>
+        <span class="cell"><%= f.text %></span>
+        <span class="cell"><%=  f.reference%></span>
+        <span class="cell"><%= f.quantity %></span>
       </div>
     <% end %>
 </div>

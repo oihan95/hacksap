@@ -19,5 +19,11 @@
 <div class=" wrapper white jump">
 	<span class="h1">Kaixo <%= current_user.izena %>!</span>
 </div>
+<br>
+<div class="wrapper aligncenter" >
+<%= form_for :post do |f| %>
+    <%= f.text_field :title, class: 'input' %>
+<% end %>
+</div>
 </body>
 </html>
