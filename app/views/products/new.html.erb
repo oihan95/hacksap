@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "forms" %>
+  <%= stylesheet_link_tag "colours" %>
+  <title>HackSAP - Menu</title>
+</head>
+<body>
+<div class = "header backgroundgreen">
+  <div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
+  <div class="navbar">
+    <%= link_to "Hasiera", menu_path, method: :delete %>
+    <a href="">Produktuak</a>
+    <%= link_to "Irten", logout_path, method: :delete %>
+  </div>
+</div>
+<div class=" wrapper white jump">
+  <span class="h1">Kaixo <%= current_user.izena %>!</span>
+</div>
+
+<div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
+  <%= form_for(@product, url: products_new_path) do |f| %>
+      <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= render 'shared/error_messages_product' %>
+      <table style="width:100%">
+        <tr>
+          <td width="30%" align="left"><%= f.label :material %></td>
+          <td width="70%"><%= f.text_field :material, class: 'input'%></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :text %></td>
+          <td width="70%"><%= f.text_field :text, class: 'input' %></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :reference %></td>
+          <td width="70%"><%= f.text_field :reference, class: 'input' %></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :quantity%></td>
+          <td width="70%"><%= f.text_field :quantity, class: 'input' %></td>
+        </tr>
+      </table>
+      <%= f.submit "Produktua Gehitu", class: "button" %>
+      <br />
+      <br />
+  <% end %>
+
+
+</div>
+
+</body>
+</html>
