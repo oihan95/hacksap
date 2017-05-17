@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   	get '/logout',  to: 'sessions#destroy'
 	resources :user
 
-  get 'products', to: 'products#menu'
+  get '/products', to: 'products#menu'
   get '/products/new', to: 'products#new'
-  post '/products/new', to: 'product#new'
+  post '/products/new', to: 'products#create'
 end
