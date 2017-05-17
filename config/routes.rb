@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get '/logout',  to: 'sessions#destroy'
 	resources :user
 
-  get '/products', to: 'products#menu'
-  get '/products/new', to: 'products#new'
-  post '/products/new', to: 'products#create'
-  get '/products/:id', to: 'products#show', as: 'product'
+  get '/produktuas', to: 'produktua#menu'
+  get '/produktuas/new', to: 'produktua#new'
+  post '/produktuas/new', to: 'produktua#create'
+  get '/produktuas/:id', to: 'produktua#show', as: 'produktua'
 end

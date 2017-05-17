@@ -14,12 +14,12 @@
   <div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
   <div class="navbar">
     <%= link_to "Hasiera", menu_path, method: :delete %>
-    <%= link_to "Produktuak", products_path, method: :get%>
+    <%= link_to "Produktuak", produktuas_path, method: :get%>
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
 <div class=" wrapper aligncenter white jump">
-  <h5><%= link_to "Produktu berria gehitu", products_new_path, method: :get, :class=>"button2" %></h5>
+  <h5><%= link_to "Produktu berria gehitu", produktuas_new_path, method: :get, :class=>"button2" %></h5>
   <br />
   <div class="wrapper aligncenter">
   <span class="h5 white">Produktu baten informazioa bistaratzeko, egin 'click' produktuaren 'Materiala' zutabearen gainean</span>
@@ -36,11 +36,16 @@
     </div>
     <% all.each do |f|  %>
       <div class = "row">
-        <span class="cell"><input type="checkbox" id = <% f.id %>></span>
-        <span class="cell"><%= link_to f.material, product_path(f), :class=>"esteka2" %></span>
-        <span class="cell"><%= f.text %></span>
-        <span class="cell"><%=  f.reference%></span>
-        <span class="cell"><%= f.quantity %></span>
+        <% if f.user_id == current_user.id %>
+          <span class="cell"><input type="checkbox" id = <% f.id %>></span>
+        <% else %>
+          <span class="cell"><input type="checkbox" disabled="disabled" id = <% f.id %>></span>
+        <% end %>
+        
+        <span class="cell"><%= link_to f.materiala, produktua_path(f), :class=>"esteka2" %></span>
+        <span class="cell"><%= f.testua %></span>
+        <span class="cell"><%=  f.erreferentzia%></span>
+        <span class="cell"><%= f.kantitatea %></span>
       </div>
     <% end %>
 </div>

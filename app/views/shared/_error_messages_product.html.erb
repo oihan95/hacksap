@@ -1,14 +1,14 @@
-<% if @product.errors.any? %>
+<% if @produktua.errors.any? %>
     <div id="error_explanation">
       <br />
-      <% if @product.errors.count > 1 %>
-          Formulario honek <%= @product.errors.count %> errore ditu.
+      <% if @produktua.errors.count > 1 %>
+          Formulario honek <%= @produktua.errors.count %> errore ditu.
       <% else %>
           Formulario honek errore bat du.
       <% end %>
       <ul>
         <br />
-        <% @product.errors.full_messages.each do |msg| %>
+        <% @produktua.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
         <% end %>
         <br />

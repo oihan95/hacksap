@@ -14,16 +14,16 @@
   <div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
   <div class="navbar">
     <%= link_to "Hasiera", menu_path, method: :delete %>
-    <%= link_to "Produktuak", products_path, method: :get%>
+    <%= link_to "Produktuak", produktuas_path, method: :get%>
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
 <div class=" wrapper aligncenter white jump">
-	<span class="h1"><%= @product.material %></span>
+	<span class="h1"><%= @produktua.materiala %></span>
 </div>
 <br />
 <div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 1000px">
-	<%= form_for(@product, url: products_new_path) do |f| %>
+	<%= form_for(@produktua, url: produktuas_new_path) do |f| %>
       <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
@@ -31,19 +31,19 @@
       <table style="width:100%">
         <tr>
           <td width="30%" align="left"><%= f.label :Materiala %></td>
-          <td width="70%"><%= f.text_field :material, class: 'input', :disabled=>true%></td>
+          <td width="70%"><%= f.text_field :materiala, class: 'input', :disabled=>true%></td>
         </tr>
         <tr>
           <td width="30%" align="left"><%= f.label :Testua %></td>
-          <td width="70%"><%= f.text_area(:text, size: '50x10', class: 'textarea', :disabled=>true) %></td>
+          <td width="70%"><%= f.text_area(:testua, size: '50x10', class: 'textarea', :disabled=>true) %></td>
         </tr>
         <tr>
           <td width="30%" align="left"><%= f.label :Hornitzailearen_erreferentzia %></td>
-          <td width="70%"><%= f.text_field :reference, class: 'input', :disabled=>true %></td>
+          <td width="70%"><%= f.text_field :erreferentzia, class: 'input', :disabled=>true %></td>
         </tr>
         <tr>
           <td width="30%" align="left"><%= f.label :Kantitatea%></td>
-          <td width="70%"><%= f.text_field :quantity, class: 'input', :disabled=>true %></td>
+          <td width="70%"><%= f.text_field :kantitatea, class: 'input', :disabled=>true %></td>
         </tr>
       </table>
       <%= f.submit "Produktua eguneratu", class: "button", :disabled=> true %>

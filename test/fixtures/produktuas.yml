@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  materiala: MyText
+  testua: MyText
+  erreferentzia: MyText
+  kantitatea: MyText
+  user: one
+
+two:
+  materiala: MyText
+  testua: MyText
+  erreferentzia: MyText
+  kantitatea: MyText
+  user: two

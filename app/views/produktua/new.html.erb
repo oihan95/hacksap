@@ -12,7 +12,7 @@
   <div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
   <div class="navbar">
     <%= link_to "Hasiera", menu_path, method: :delete %>
-    <%= link_to "Produktuak", products_path, method: :get%>
+    <%= link_to "Produktuak", produktuas_path, method: :get%>
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
@@ -20,36 +20,33 @@
 </div>
 
 <div class="formulario wrapper aligncenter backgroundgreen" style="max-width: 500px">
-  <%= form_for(@product, url: products_new_path) do |f| %>
+  <%= form_for(@produktua, url: produktuas_new_path) do |f| %>
       <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <%= render 'shared/error_messages_product' %>
       <table style="width:100%">
         <tr>
-          <td width="30%" align="left"><%= f.label :material %></td>
-          <td width="70%"><%= f.text_field :material, class: 'input'%></td>
+          <td width="30%" align="left"><%= f.label :Materiala %></td>
+          <td width="70%"><%= f.text_field :materiala, class: 'input'%></td>
         </tr>
         <tr>
-          <td width="30%" align="left"><%= f.label :text %></td>
-          <td width="70%"><%= f.text_field :text, class: 'input' %></td>
+          <td width="30%" align="left"><%= f.label :Testua %></td>
+          <td width="70%"><%= f.text_field :testua, class: 'input' %></td>
         </tr>
         <tr>
-          <td width="30%" align="left"><%= f.label :reference %></td>
-          <td width="70%"><%= f.text_field :reference, class: 'input' %></td>
+          <td width="30%" align="left"><%= f.label :Erreferentzia %></td>
+          <td width="70%"><%= f.text_field :erreferentzia, class: 'input' %></td>
         </tr>
         <tr>
-          <td width="30%" align="left"><%= f.label :quantity%></td>
-          <td width="70%"><%= f.text_field :quantity, class: 'input' %></td>
+          <td width="30%" align="left"><%= f.label :Kantitatea%></td>
+          <td width="70%"><%= f.text_field :kantitatea, class: 'input' %></td>
         </tr>
       </table>
       <%= f.submit "Produktua Gehitu", class: "button" %>
       <br />
       <br />
   <% end %>
-
-
 </div>
-
 </body>
 </html>
