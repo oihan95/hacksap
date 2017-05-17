@@ -18,7 +18,7 @@ class ProductsController< ApplicationController
   end
   private
   def products_param
-    params.require(:material).permit(:text, :reference, :quantity)
+    params.require(:product).permit(:material,:text, :reference, :quantity)
 
   end
 end
