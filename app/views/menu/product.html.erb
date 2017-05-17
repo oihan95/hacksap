@@ -5,7 +5,8 @@
   <%= stylesheet_link_tag "style" %>
   <%= stylesheet_link_tag "forms" %>
   <%= stylesheet_link_tag "colours" %>
-  <title>HackSAP - Menu</title>
+  <%= stylesheet_link_tag "titles" %>
+  <title>HackSAP - Produktuak</title>
 </head>
 <body>
 <div class = "header backgroundgreen">
@@ -16,9 +17,11 @@
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
-<div class=" wrapper white jump">
-  <span class="h1">Produktuak!</span>
-  <h5><%= link_to "Berria gehitu", products_new_path, method: :get %></h5>
+<div class=" wrapper aligncenter white jump">
+  <span class="h1">Produktuak</span>
+  <br />
+  <br />
+  <h5><%= link_to "Produktu berria gehitu", products_new_path, method: :get, :class=>"button2" %></h5>
 </div>
 </body>
 </html>

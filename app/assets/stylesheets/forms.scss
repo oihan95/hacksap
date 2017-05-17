@@ -42,6 +42,21 @@
     background: black;
 }
 
+.button2{
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Monaco, monospace;
+    color: black;
+    background-color: green;
+    
+}
+.button2:hover{
+    background: white;
+}
+
 #error_explanation {
   color: white;
   font-weight: bold;
@@ -51,5 +66,4 @@
     margin: 0 0 30px 0;
     list-style: none;
   }
-
 }
