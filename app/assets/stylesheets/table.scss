@@ -1,0 +1,41 @@
+#table {
+	display: table;
+ 	width: 100%; 
+ 	background: #fff;
+ 	margin: 0;
+ 	box-sizing: border-box;
+}
+
+.caption {
+	display: block;
+	width: 100%;
+	background-color: green;
+	height: 55px;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 55px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	box-sizing: border-box;
+}
+
+
+.header-row {
+	background: #8b8b8b;
+}
+
+.row {
+	display: table-row;
+}
+
+.cell {
+	display: table-cell;
+	padding: 6px;
+	color: black;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+}
+
+.primary {
+	text-align: left;
+}

@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag "forms" %>
   <%= stylesheet_link_tag "colours" %>
   <%= stylesheet_link_tag "titles" %>
+  <%= stylesheet_link_tag "table" %>
   <title>HackSAP - Produktuak</title>
 </head>
 <body>
@@ -18,10 +19,46 @@
   </div>
 </div>
 <div class=" wrapper aligncenter white jump">
-  <span class="h1">Produktuak</span>
-  <br />
-  <br />
   <h5><%= link_to "Produktu berria gehitu", products_new_path, method: :get, :class=>"button2" %></h5>
+  <br />
+  <div class="caption">Produktuak</div>  
+<div id="table">
+  <div class="header-row row">
+    <span class="cell"></span>
+    <span class="cell">Materiala</span>
+    <span class="cell">Testua</span>
+    <span class="cell">Hornitzailearen erreferentzia</span>
+    <span class="cell">Kantitatea</span>
+  </div>
+  <div class="row">
+    <input type="checkbox">
+    <span class="cell">2013 Subaru WRX</span>
+    <span class="cell">World Rally Blue</span>
+    <span class="cell">Black</span>
+    <span class="cell">2.5L H4 Turbo</span>
+  </div>
+  <div class="row">
+    <input type="checkbox">
+    <span class="cell">2013 Subaru WRX</span>
+    <span class="cell">World Rally Blue</span>
+    <span class="cell">Black</span>
+    <span class="cell">2.5L H4 Turbo</span>
+  </div>
+  <div class="row">
+    <input type="checkbox">
+    <span class="cell">2013 Subaru WRX</span>
+    <span class="cell">World Rally Blue</span>
+    <span class="cell">Black</span>
+    <span class="cell">2.5L H4 Turbo</span>
+  </div>
+  <div class="row">
+    <input type="checkbox">
+    <span class="cell">2013 Subaru WRX</span>
+    <span class="cell">World Rally Blue</span>
+    <span class="cell">Black</span>
+    <span class="cell">2.5L H4 Turbo</span>
+  </div>
+</div>
 </div>
 </body>
 </html>

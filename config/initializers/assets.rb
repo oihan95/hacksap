@@ -7,6 +7,7 @@ Rails.application.config.assets.precompile += %w( titles.scss )
 Rails.application.config.assets.precompile += %w( colours.scss )
 Rails.application.config.assets.precompile += %w( forms.scss )
 Rails.application.config.assets.precompile += %w( shapes.scss )
+Rails.application.config.assets.precompile += %w( table.scss )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
