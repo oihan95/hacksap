@@ -4,6 +4,10 @@ class ProduktuaController < ApplicationController
     @produktua = Produktua.new
   end
 
+  def index
+    @produktua = Produktua.all
+  end
+
   def create
     @produktua = current_user.produktuas.build(products_param)
     if @produktua.save

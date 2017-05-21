@@ -45,7 +45,7 @@
         <span class="cell"><%= f.kantitatea %></span>
         <% if f.user_id == current_user.id %>
           <span class="cell"><%= link_to "Editatu", edit_produktua_path(f), :class=>"esteka2" %></span>
-          <span class="cell"><%= link_to 'Ezabatu', produktua_path(f), :method => :delete, data: {:confirm => 'Are you sure?'}, :class =>"esteka2" %></span>
+          <span class="cell"><%= link_to 'Ezabatu', produktua_path(f), method: :delete, :class =>"esteka2" %></span>
         <% else %>
           <span class="cell">Editatu</span>
           <span class="cell">Ezabatu</span>
