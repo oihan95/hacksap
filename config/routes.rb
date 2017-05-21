@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   get '/logout',  to: 'sessions#destroy'
 	resources :user
 
+  delete 'produktuas/:id', to: 'produktua#destroy'
   get '/produktuas', to: 'produktua#menu'
   get '/produktuas/new', to: 'produktua#new'
   post '/produktuas/new', to: 'produktua#create'
   get '/produktuas/:id', to: 'produktua#show', as: 'produktua'
+  get '/produktuas/:id/edit', to: 'produktua#edit'
+  resources :produktua
 end

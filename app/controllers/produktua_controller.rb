@@ -17,10 +17,20 @@ class ProduktuaController < ApplicationController
     render 'menu/product'
   end
 
+  def destroy
+    Produktua.find(params[:id]).destroy
+    flash[:success] = "Produktua ezabatuta"
+    render 'menu/product'
+  end
+
   def show
     @produktua = Produktua.find(params[:id])
   end
 
+  def edit
+    @produktua = Produktua.find(params[:id])
+    render 'produktua/edit'
+  end
 
   private
   def products_param

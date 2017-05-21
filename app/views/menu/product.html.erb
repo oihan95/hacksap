@@ -18,34 +18,38 @@
     <%= link_to "Irten", logout_path, method: :delete %>
   </div>
 </div>
-<div class=" wrapper aligncenter white jump">
+<div class="wrapper aligncenter white jump">
   <h5><%= link_to "Produktu berria gehitu", produktuas_new_path, method: :get, :class=>"button2" %></h5>
   <br />
   <div class="wrapper aligncenter">
   <span class="h5 white">Produktu baten informazioa bistaratzeko, egin 'click' produktuaren 'Materiala' zutabearen gainean</span>
+  <br />
+  <span class="h5 white">Produktu bat ezabatzeko edo editatzeko, taulako eskuineko bi zutabeetan izango dituzu bi esteka. Produktua ez baduzu zuk sortu, sistemak ez dizu produktua ezabatzeko edo editatzeko aukera emango</span>
   </div>
   <br />
   <div class="caption">Produktuak</div>
   <div id="table">
     <div class="header-row row2">
-      <span class="cell"></span>
       <span class="cell">Materiala</span>
       <span class="cell">Testua</span>
       <span class="cell">Hornitzailearen erreferentzia</span>
       <span class="cell">Kantitatea</span>
+      <span class="cell"></span>
+      <span class="cell"></span>
     </div>
     <% all.each do |f|  %>
       <div class = "row">
-        <% if f.user_id == current_user.id %>
-          <span class="cell"><input type="checkbox" id = <% f.id %>></span>
-        <% else %>
-          <span class="cell"><input type="checkbox" disabled="disabled" id = <% f.id %>></span>
-        <% end %>
-        
         <span class="cell"><%= link_to f.materiala, produktua_path(f), :class=>"esteka2" %></span>
         <span class="cell"><%= f.testua %></span>
         <span class="cell"><%=  f.erreferentzia%></span>
         <span class="cell"><%= f.kantitatea %></span>
+        <% if f.user_id == current_user.id %>
+          <span class="cell"><%= link_to "Editatu", edit_produktua_path(f), :class=>"esteka2" %></span>
+          <span class="cell"><%= link_to 'Ezabatu', produktua_path(f), :method => :delete, data: {:confirm => 'Are you sure?'}, :class =>"esteka2" %></span>
+        <% else %>
+          <span class="cell">Editatu</span>
+          <span class="cell">Ezabatu</span>
+        <% end %>
       </div>
     <% end %>
 </div>

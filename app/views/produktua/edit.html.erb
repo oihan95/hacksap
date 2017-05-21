@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "forms" %>
+	<%= stylesheet_link_tag "colours" %>
+	<%= stylesheet_link_tag "titles" %>
+	<title>HackSAP - Editatu</title>
+</head>
+<body>
+<div class = "header backgroundgreen">
+	<div id="logo"><span class="black">Hack</span><span class="white">SAP</span></div>
+	<div class="navbar">
+		<%= link_to "Hasiera", menu_path, method: :delete %>
+		<%= link_to "Produktuak", produktuas_path, method: :get%>
+		<%= link_to "Irten", logout_path, method: :delete %>
+	</div>
+</div>
+<div class="wrapper aligncenter white jump">
+<div class="formulario wrapper aligncenter backgroundgreen jump" style="max-width: 500px">
+	<%= form_for(@produktua, url: produktuas_new_path) do |f| %>
+      <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= render 'shared/error_messages_product' %>
+      <table style="width:100%">
+        <tr>
+          <td width="30%" align="left"><%= f.label :Materiala %></td>
+          <td width="70%"><%= f.text_field :materiala, class: 'input'%></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :Testua %></td>
+          <td width="70%"><%= f.text_area(:testua, size: '50x10', class: 'textarea') %></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :Hornitzailearen_erreferentzia %></td>
+          <td width="70%"><%= f.text_field :erreferentzia, class: 'input' %></td>
+        </tr>
+        <tr>
+          <td width="30%" align="left"><%= f.label :Kantitatea%></td>
+          <td width="70%"><%= f.text_field :kantitatea, class: 'input' %></td>
+        </tr>
+      </table>
+      <%= f.submit "Produktua eguneratu", class: "button", :disabled=> true %>
+      <%= link_to "Atzera", produktuas_path, :class=>"button" %>
+      <br />
+  <% end %>
+</div>
+<br />
+<span class="h5 white">Atzera botoia sakatzen baduzu, egindako aldaketak ez dira gordeko</span>
+</div>
+</body>
+</html>
