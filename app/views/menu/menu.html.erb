@@ -21,8 +21,8 @@
 </div>
 <br>
 <div class="wrapper aligncenter" >
-<%= form_for :post do |f| %>
-    <%= f.text_field :title, class: 'input' %>
+<%= form_tag produktuas_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], :class=>"input" %>
 <% end %>
 </div>
 </body>

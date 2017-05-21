@@ -1,4 +1,5 @@
 class ProduktuaController < ApplicationController
+
 	def new
     @produktua = Produktua.new
   end
