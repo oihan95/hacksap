@@ -32,6 +32,16 @@ class ProduktuaController < ApplicationController
     render 'produktua/edit'
   end
 
+  def update
+    @produktua = Produktua.find(params[:id])
+    if @produktua.update_attributes(products_param)
+      flash[:success] = "Produktua eguneratuta"
+      redirect_to :back
+    else
+      render 'produktua/edit'
+    end
+  end
+
   private
   def products_param
     params.require(:produktua).permit(:materiala,:testua, :erreferentzia, :kantitatea)

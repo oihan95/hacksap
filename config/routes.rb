@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 	resources :user
 
   delete 'produktuas/:id', to: 'produktua#destroy'
+  patch 'produktuas/:id', to: 'produktua#update'
   get '/produktuas', to: 'produktua#menu'
   get '/produktuas/new', to: 'produktua#new'
   post '/produktuas/new', to: 'produktua#create'

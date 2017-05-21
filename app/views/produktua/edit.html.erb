@@ -19,7 +19,7 @@
 </div>
 <div class="wrapper aligncenter white jump">
 <div class="formulario wrapper aligncenter backgroundgreen jump" style="max-width: 500px">
-	<%= form_for(@produktua, url: produktuas_new_path) do |f| %>
+	<%= form_for(@produktua) do |f| %>
       <% flash.each do |message_type, message| %>
           <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
@@ -42,7 +42,7 @@
           <td width="70%"><%= f.text_field :kantitatea, class: 'input' %></td>
         </tr>
       </table>
-      <%= f.submit "Produktua eguneratu", class: "button", :disabled=> true %>
+      <%= f.submit "Produktua eguneratu", class: "button" %>
       <%= link_to "Atzera", produktuas_path, :class=>"button" %>
       <br />
   <% end %>
