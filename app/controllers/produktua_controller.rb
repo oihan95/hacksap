@@ -5,7 +5,7 @@ class ProduktuaController < ApplicationController
   end
 
   def index
-    @produktua = Produktua.all
+    @produktua = Produktua.where("name like ?", "%#{params[:search]}%")
   end
 
   def create
