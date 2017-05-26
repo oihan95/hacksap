@@ -23,6 +23,10 @@ class ProduktuaController < ApplicationController
     render 'menu/product'
   end
 
+  def laguntza
+    render 'produktua/help'
+  end
+
   def destroy
     Produktua.find(params[:id]).destroy
     redirect_to '/menu'
