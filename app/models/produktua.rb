@@ -1,11 +1,10 @@
 class Produktua < ApplicationRecord
-	attr_accesible :materiala, :testua
 
 	def self.search(search)
 		if search.present?
-			where("materiala ilike :q or testua ilike :q", :q "%#{search}%")
+			self.where("materiala LIKE ? OR testua LIKE ? OR erreferentzia LIKE ? OR kantitatea LIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%")
 		else
-			find(:all)
+			self.all
 		end
 	end
 

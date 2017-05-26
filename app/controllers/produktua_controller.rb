@@ -4,8 +4,9 @@ class ProduktuaController < ApplicationController
     @produktua = Produktua.new
   end
 
-  def index
+  def bilatu
     @produktua = Produktua.search(params[:search])
+    render 'produktua/search'
   end
 
   def create
