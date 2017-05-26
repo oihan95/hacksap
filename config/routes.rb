@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/logout',  to: 'sessions#destroy'
 	resources :user
 
-  delete 'produktuas/:id', to: 'produktua#destroy'
+  get 'produktuas/:id/delete', to: 'produktua#destroy', as: 'del_prod'
   patch 'produktuas/:id', to: 'produktua#update'
   get '/produktuas', to: 'produktua#menu'
   get '/produktuas/new', to: 'produktua#new'

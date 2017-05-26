@@ -45,7 +45,7 @@
 <% if @produktua.user_id == current_user.id %>
 <div class="wrapper aligncenter white">
   <%= link_to "Editatu", edit_produktua_path(@produktua.id), :class=>"button2" %>
-  <%= link_to 'Ezabatu', produktua_path(@produktua.id), :method => :delete, :class =>"button2" %>
+  <%= link_to "Ezabatu", del_prod_path(@produktua.id), :class =>"button2" %>
 </div>
 <% end %>
 </body>

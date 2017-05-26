@@ -1,8 +1,9 @@
 class Produktua < ApplicationRecord
+	attr_accesible :materiala, :testua
 
 	def self.search(search)
-		if search
-			where("name like ?", "%#{search}%")
+		if search.present?
+			where("materiala ilike :q or testua ilike :q", :q "%#{search}%")
 		else
 			find(:all)
 		end

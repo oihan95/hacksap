@@ -5,7 +5,7 @@ class ProduktuaController < ApplicationController
   end
 
   def index
-    @produktua = Produktua.where("name like ?", "%#{params[:search]}%")
+    @produktua = Produktua.search(params[:search])
   end
 
   def create
@@ -24,8 +24,7 @@ class ProduktuaController < ApplicationController
 
   def destroy
     Produktua.find(params[:id]).destroy
-    flash[:success] = "Produktua ezabatuta"
-    render 'menu/product'
+    redirect_to '/menu'
   end
 
   def show
