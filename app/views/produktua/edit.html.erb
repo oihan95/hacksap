@@ -7,6 +7,24 @@
 	<%= stylesheet_link_tag "colours" %>
 	<%= stylesheet_link_tag "titles" %>
 	<title>HackSAP - Editatu</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script language="javascript">
+$(document).ready(function() {
+
+  $('form').keypress(function(e){   
+    if(e == 13){
+      return false;
+    }
+  });
+
+  $('input').keypress(function(e){
+    if(e.which == 13){
+      return false;
+    }
+  });
+
+});
+</script>
 </head>
 <body>
 <div class = "header backgroundgreen">
@@ -44,7 +62,7 @@
         </tr>
       </table>
       <%= f.submit "Produktua eguneratu", class: "button" %>
-      <%= link_to "Atzera", produktuas_path, :class=>"button" %>
+      <%= link_to "Atzera", menu_path, :class=>"button" %>
       <br />
   <% end %>
 </div>
