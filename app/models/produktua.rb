@@ -13,6 +13,6 @@ class Produktua < ApplicationRecord
 	default_scope -> { order(created_at: :desc) }
   	validates :materiala, presence: true, uniqueness: {case_sensitive: false}
 	validates :testua, presence: true
-	validates :erreferentzia, presence: true, length: {maximum:20 }
+	validates :erreferentzia, presence: true, length: {maximum:200 }
 	validates :kantitatea, presence: true
 end

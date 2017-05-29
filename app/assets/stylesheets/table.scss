@@ -32,6 +32,10 @@
 
 .td{
 	border-bottom: 1px solid #e5e5e5;
+	max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .th{
